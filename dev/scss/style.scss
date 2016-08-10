@@ -14,3 +14,10 @@ a {
 ul {
 	list-style: none;
 }
+
+.right-glyph {
+	float: right;
+	&:hover {
+        color:red;
+    }
+}

@@ -5,6 +5,7 @@ import App from "./containers/App"
 import store from "./store";
 require("../scss/style.scss");
 
+
 ReactDOM.render(            
     <Provider store={store}>
         <App />
