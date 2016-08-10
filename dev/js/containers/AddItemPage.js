@@ -3,17 +3,21 @@ import {connect} from 'react-redux'
 import Form from '../components/addedItemPage/Form';
 import AddedItemList from '../components/addedItemPage/AddedItemList';
 import Col from 'react-bootstrap/lib/Col'
-
+import { bindActionCreators } from 'redux'
+import * as actions from '../actions/index';
 
 class AddItemPage extends React.Component {
     render() {
         return (
             <div>
                 <Col xs= {12} sm={12} md={8}>
-                    <Form />
+                    <Form addItem={this.props.addItem}/>
                 </Col>
                 <Col xs= {12} sm={12} md={4}>
-                    <AddedItemList addedItemList={this.props.addedItemList}/>
+                    <AddedItemList 
+                        addedItemList={this.props.addedItemList}
+                        removeItem={this.props.removeItem}
+                    />
                 </Col>
             </div>
         );
@@ -22,8 +26,15 @@ class AddItemPage extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        addedItemList: state.addedItemList,
+        addedItemList: state.addedItems,
     };
 }
 
-export default connect(mapStateToProps)(AddItemPage);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addItem: bindActionCreators(actions.addItem, dispatch),
+        removeItem: bindActionCreators(actions.removeItem, dispatch)
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddItemPage);

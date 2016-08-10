@@ -5,11 +5,17 @@ import Button from 'react-bootstrap/lib/Button'
 import Glyphicon from 'react-bootstrap/lib/Glyphicon'
 
 class AddedItemList extends React.Component {
-
     render(){
-        let items = ["Item 1", "Item 2", "Item 3"].map((item) => {
+        let items = this.props.addedItemList.map((item, index) => {
             return (
-                <ListGroupItem>{item}<Glyphicon className="right-glyph" glyph="remove" /></ListGroupItem>
+                <ListGroupItem key={index}>
+                    {item}
+                    <Glyphicon 
+                        className="right-glyph" 
+                        glyph="remove" 
+                        onClick={()=>{}} 
+                    />
+                </ListGroupItem>
             )
         });
         return (
