@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import Form from '../components/addedItemPage/Form';
-import AddedItemList from '../components/addedItemPage/AddedItemList';
+import Form from '../components/form/AddItemForm';
+import AddedItemList from '../components/form/AddedItemList';
 import Col from 'react-bootstrap/lib/Col'
 
 
