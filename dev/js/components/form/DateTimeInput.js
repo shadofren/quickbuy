@@ -8,9 +8,8 @@ class DateTimeInput extends React.Component {
         super(props);
         this.changeDateTime = this.changeDateTime.bind(this);
     }
-    changeDateTime() {
-        let dateTime = ReactDOM.findDOMNode(this.refs.dateTimeInput).lastChild.firstChild.value;
-        this.props.handleChange(dateTime);
+    changeDateTime(newDate) {
+        this.props.handleChange(new Date(parseInt(newDate)));
     }
     
     render(){
