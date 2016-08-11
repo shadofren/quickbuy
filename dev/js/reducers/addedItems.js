@@ -16,4 +16,4 @@ function addedItems(state = [], action) {
   }
 }
 
-export default addedItems;
+export default addedItems; 
