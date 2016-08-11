@@ -7,9 +7,9 @@ function addedItems(state = [], action) {
         // payload passes the item
         state = [...state, action.payload];
         return state;
-      case "DELETE_ITEM":
+      case "REMOVE_ITEM":
         // payload passes the index to be remove
-        state = [...state.splice(0, action.payload), ...state.splice(1)];
+        state = [...state.splice(0,action.payload),...state.splice(1)]
         return state;
       default: 
         return state;          

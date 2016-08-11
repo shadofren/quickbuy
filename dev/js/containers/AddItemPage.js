@@ -26,7 +26,7 @@ class AddItemPage extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        addedItemList: state.addedItems,
+        addedItemList: state.items,
     };
 }
 

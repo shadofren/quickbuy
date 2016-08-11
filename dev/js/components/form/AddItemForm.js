@@ -31,7 +31,7 @@ class Form extends React.Component {
         super();
         this.state = initialState;
         this.changeMainImage = this.changeMainImage.bind(this); 
-        this.changeSubImage = this.changeSubImage.bind(this); 
+        this.changeSubImages = this.changeSubImages.bind(this); 
         this.changePrice = this.changePrice.bind(this); 
         this.changeDateTime = this.changeDateTime.bind(this); 
         this.changeLocation = this.changeLocation.bind(this); 
@@ -43,13 +43,11 @@ class Form extends React.Component {
     }
 
     changeMainImage(src){
-        console.log(this.state);
         this.setState({mainImageSrc: src});
     }
 
-    changeSubImage(src, index){
-        console.log(this.state);
-        newSrcs = [...this.state.subImages];
+    changeSubImages(src, index){
+        let newSrcs = [...this.state.subImages];
         newSrcs[index] = src;
         this.setState({subImages: newSrcs})
     }
@@ -75,7 +73,8 @@ class Form extends React.Component {
     }
 
     handleAdd(){
-        console.log(this.state);
+        this.props.addItem(this.state);
+        this.setState(initialState);
     }
 
     handleClear(){
@@ -93,12 +92,15 @@ class Form extends React.Component {
                 <Row className="show-grid">
                     <Col xs= {12} sm={12} md={6}>
                         <ImageInput 
+                            index={0}
                             src={this.state.mainImageSrc}
+                            handleChange={this.changeMainImage}
                         />
                     </Col>
                     <Col xs= {12} sm={12} md={6}>
                         <ImageInputList 
                             imagesSrc={this.state.subImages}
+                            handleChange={this.changeSubImages}
                         />
                     </Col>
                 </Row>
