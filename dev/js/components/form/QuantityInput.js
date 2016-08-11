@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ControlLabel from 'react-bootstrap/lib/ControlLabel'
-import FormControl from 'react-bootstrap/lib/FormControl'
+import { ControlLabel, FormControl } from 'react-bootstrap'
 
 class QuantityInput extends React.Component {
     constructor(props){

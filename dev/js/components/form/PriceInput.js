@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ControlLabel from 'react-bootstrap/lib/ControlLabel'
-import FormControl from 'react-bootstrap/lib/FormControl'
-import InputGroup from 'react-bootstrap/lib/InputGroup'
+import { ControlLabel, FormControl, InputGroup } from 'react-bootstrap'
 
 class PriceInput extends React.Component {
     constructor(props){

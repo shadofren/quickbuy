@@ -1,7 +1,6 @@
 import React from 'react';
 import ImageInput from './ImageInput'
-import Row from 'react-bootstrap/lib/Row'
-import Col from 'react-bootstrap/lib/Col'
+import { Row, Col } from 'react-bootstrap'
 
 class ImageInputList extends React.Component {
     constructor(props){

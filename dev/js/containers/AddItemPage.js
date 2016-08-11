@@ -1,10 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux'
+import { bindActionCreators } from 'redux'
+import Col from 'react-bootstrap/lib/Col'
+import * as actions from '../actions/index';
 import Form from '../components/form/AddItemForm';
 import AddedItemList from '../components/form/AddedItemList';
-import Col from 'react-bootstrap/lib/Col'
-import { bindActionCreators } from 'redux'
-import * as actions from '../actions/index';
 
 class AddItemPage extends React.Component {
     render() {

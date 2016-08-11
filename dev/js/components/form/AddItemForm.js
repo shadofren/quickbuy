@@ -1,16 +1,13 @@
 import React from 'react';
+import { FormGroup, Col, Row, Grid } from 'react-bootstrap'
+import ButtonSet from './ButtonSet'
 import ImageInput from './ImageInput'
 import ImageInputList from './ImageInputList'
 import PriceInput from './PriceInput'
 import DateTimeInput from './DateTimeInput'
 import TextInput from './TextInput'
-import QuantityInput from './QuantityInput'
-import AddMoreItemButton from './AddMoreItemButton'
-import FormGroup from 'react-bootstrap/lib/FormGroup'
-import Col from 'react-bootstrap/lib/Col'
-import Row from 'react-bootstrap/lib/Row'
-import Grid from 'react-bootstrap/lib/Grid'
-import ButtonSet from './ButtonSet'
+import QuantityInput from './QuantityInput' 
+
 
 const initialState = {
     mainImageSrc: '/assets/thumbnail.png',

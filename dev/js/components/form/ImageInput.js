@@ -1,12 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Image from 'react-bootstrap/lib/Image';
-import Popover from 'react-bootstrap/lib/Popover';
-import Overlay from 'react-bootstrap/lib/Overlay';
-import Button from 'react-bootstrap/lib/Button';
-import Modal from 'react-bootstrap/lib/Modal';
-import FormGroup from 'react-bootstrap/lib/FormGroup';
-import FormControl from 'react-bootstrap/lib/FormControl';
+import { Image, Popover, Overlay, Button, Modal, FormGroup, FormControl } from 'react-bootstrap';
 
 
 class ImageInput extends React.Component {

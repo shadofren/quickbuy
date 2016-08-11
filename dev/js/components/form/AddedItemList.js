@@ -1,8 +1,5 @@
 import React from 'react';
-import ListGroup from 'react-bootstrap/lib/ListGroup'
-import ListGroupItem from 'react-bootstrap/lib/ListGroupItem'
-import Button from 'react-bootstrap/lib/Button'
-import Glyphicon from 'react-bootstrap/lib/Glyphicon'
+import { ListGroup, ListGroupItem, Button, Glyphicon } from 'react-bootstrap'
 
 class AddedItemList extends React.Component {
     constructor(props){

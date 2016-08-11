@@ -1,9 +1,5 @@
 import React from 'react';
-import ButtonGroup from 'react-bootstrap/lib/ButtonGroup'
-import Button from 'react-bootstrap/lib/Button'
-import Row from 'react-bootstrap/lib/Row'
-import Col from 'react-bootstrap/lib/Col'
-import Glyphicon from 'react-bootstrap/lib/Glyphicon'
+import { ButtonGroup, Button, Row, Col, Glyphicon } from 'react-bootstrap'
 
 class ButtonSet extends React.Component {
     render(){
