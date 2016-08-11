@@ -19,7 +19,7 @@ class AddedItemList extends React.Component {
             var boundClick = this.remove.bind(this, index);
             return (
                 <ListGroupItem key={index} ref={index} value={index}>
-                    {item.description}
+                    {item.name} X {item.quantity}
                     <Glyphicon 
                         className="right-glyph" 
                         glyph="remove" 

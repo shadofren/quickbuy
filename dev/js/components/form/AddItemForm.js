@@ -3,9 +3,8 @@ import ImageInput from './ImageInput'
 import ImageInputList from './ImageInputList'
 import PriceInput from './PriceInput'
 import DateTimeInput from './DateTimeInput'
-import LocationInput from './LocationInput'
+import TextInput from './TextInput'
 import QuantityInput from './QuantityInput'
-import DescriptionInput from './DescriptionInput'
 import AddMoreItemButton from './AddMoreItemButton'
 import FormGroup from 'react-bootstrap/lib/FormGroup'
 import Col from 'react-bootstrap/lib/Col'
@@ -19,6 +18,7 @@ const initialState = {
         '/assets/thumbnail.png', '/assets/thumbnail.png', '/assets/thumbnail.png',
         '/assets/thumbnail.png', '/assets/thumbnail.png', '/assets/thumbnail.png'
     ],
+    name: "",
     price: 0.0,
     dateTime: (new Date()),
     location: "",
@@ -34,6 +34,7 @@ class Form extends React.Component {
         this.changeSubImages = this.changeSubImages.bind(this); 
         this.changePrice = this.changePrice.bind(this); 
         this.changeDateTime = this.changeDateTime.bind(this); 
+        this.changeName = this.changeName.bind(this); 
         this.changeLocation = this.changeLocation.bind(this); 
         this.changeQuantity = this.changeQuantity.bind(this); 
         this.changeDescription = this.changeDescription.bind(this); 
@@ -62,6 +63,10 @@ class Form extends React.Component {
 
     changeLocation(location){
         this.setState({location: location});
+    }
+
+    changeName(name){
+        this.setState({name: name});
     }
 
     changeQuantity(quantity){
@@ -104,6 +109,18 @@ class Form extends React.Component {
                         />
                     </Col>
                 </Row>
+            </FormGroup>
+            <FormGroup>
+                <Row className="show-grid">
+                    <Col xs= {12} sm={12} md={12}>
+                        <TextInput 
+                            field={this.state.name}
+                            handleChange={this.changeName}
+                            label="Name"
+                            placeholder="Enter a name for your item ..."
+                        />
+                    </Col>
+                </Row>
             </FormGroup>    
             <FormGroup>              
                 <Row className="show-grid">
@@ -124,9 +141,11 @@ class Form extends React.Component {
             <FormGroup>
                 <Row className="show-grid">
                     <Col xs= {12} sm={12} md={6}>
-                        <LocationInput 
-                            location={this.state.location}
+                        <TextInput 
+                            field={this.state.location}
                             handleChange={this.changeLocation}
+                            label="Pickup location"
+                            placeholder="Enter a pickup location ..."
                         />
                     </Col>
                     <Col xs= {12} sm={12} md={6}>
@@ -140,9 +159,11 @@ class Form extends React.Component {
             <FormGroup>
                 <Row className="show-grid">
                     <Col xs= {12} sm={12} md={12}>
-                        <DescriptionInput 
-                            description={this.state.description}
+                        <TextInput 
+                            field={this.state.description}
                             handleChange={this.changeDescription}
+                            label="Item Description"
+                            placeholder="Something about this item ..."
                         />
                     </Col>
                 </Row>  
