@@ -74,7 +74,13 @@ class Form extends React.Component {
     }
 
     handleAdd(){
-        this.props.addItem(this.state);
+        // reformat the number fields
+        let state = Object.assign({}, this.state);
+        state.quantity = parseInt(state.quantity);
+        state.price = parseFloat(state.price).toFixed(2);
+
+        // TODO: add error checking
+        this.props.addItem(state);
         this.setState(initialState);
     }
 

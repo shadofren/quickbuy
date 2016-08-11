@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ControlLabel, FormControl, InputGroup } from 'react-bootstrap'
+import { ControlLabel, FormControl, InputGroup, Glyphicon } from 'react-bootstrap'
 
 class NumberInput extends React.Component {
     constructor(props){
@@ -17,7 +17,7 @@ class NumberInput extends React.Component {
                 <div>
                     <ControlLabel>{this.props.label}</ControlLabel>
                     <InputGroup>
-                        <InputGroup.Addon>$</InputGroup.Addon>
+                        <InputGroup.Addon><Glyphicon glyph="usd" /></InputGroup.Addon>
                         <FormControl
                             ref="field"
                             type="text"

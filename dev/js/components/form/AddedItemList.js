@@ -30,7 +30,7 @@ class AddedItemList extends React.Component {
                 <ListGroup>
                     {items}
                 </ListGroup>
-                <Button block>Done</Button>
+                <Button block bsStyle="success">Done</Button>
             </div>
         )
     }

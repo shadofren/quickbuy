@@ -36,7 +36,7 @@ class ImageInput extends React.Component {
     render(){
         return (
             <div>
-                <Image src={this.props.src} onClick={this.handleClick} responsive />
+                <Image src={this.props.src} onClick={this.handleClick} responsive thumbnail />
                 <Modal show={this.state.show} onHide={this.handleClick}>
                     <Modal.Header closeButton>
                         <Modal.Title>Change Image Url</Modal.Title>
