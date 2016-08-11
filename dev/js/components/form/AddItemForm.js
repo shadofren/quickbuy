@@ -3,10 +3,9 @@ import { FormGroup, Col, Row, Grid } from 'react-bootstrap'
 import ButtonSet from './ButtonSet'
 import ImageInput from './ImageInput'
 import ImageInputList from './ImageInputList'
-import PriceInput from './PriceInput'
+import NumberInput from './NumberInput'
 import DateTimeInput from './DateTimeInput'
 import TextInput from './TextInput'
-import QuantityInput from './QuantityInput' 
 
 
 const initialState = {
@@ -16,10 +15,10 @@ const initialState = {
         '/assets/thumbnail.png', '/assets/thumbnail.png', '/assets/thumbnail.png'
     ],
     name: "",
-    price: 0.0,
+    price: "0",
     dateTime: (new Date()),
     location: "",
-    quantity: 0,
+    quantity: "0",
     description: ""
 };
 
@@ -122,9 +121,12 @@ class Form extends React.Component {
             <FormGroup>              
                 <Row className="show-grid">
                     <Col xs= {12} sm={12} md={6}>
-                        <PriceInput
-                            price={this.state.price} 
+                        <NumberInput 
+                            inputType="price"
+                            value={this.state.price}
                             handleChange={this.changePrice}
+                            label="Price"
+                            placeholder="0.0"
                         />
                     </Col>
                     <Col xs= {12} sm={12} md={6}>
@@ -146,9 +148,12 @@ class Form extends React.Component {
                         />
                     </Col>
                     <Col xs= {12} sm={12} md={6}>
-                        <QuantityInput 
-                            quantity={this.state.quantity}
+                        <NumberInput 
+                            inputType="quantity"
+                            value={this.state.quantity}
                             handleChange={this.changeQuantity}
+                            label="Quantity"
+                            placeholder="0"
                         />
                     </Col>
                 </Row>            
